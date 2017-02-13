@@ -1,117 +1,332 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>你的眼是我此生不遇的海</title>
-	<style>
-		*{
-			margin: 0;
-			padding: 0;
-		}
-		ul{
-			list-style: none;
-			/*display: block;
-			content: "";
-			clear:both;*/
-			position: absolute;
-			top: 50%;
-			margin-top: -180px;
+<!DOCTYPE HTML>
+<html> 
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,ie=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="baidu-site-verification" content="李昊东博客" />
+    <meta name="keywords"  content="李昊东博客"/>
+    <meta name="description"  content="李昊东博客"/>
+    <title>Joker李个人博客</title>
+    <link rel="icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" href="css/os.css">
+    <link rel="stylesheet" href="css/style.css">
+  	<link rel="stylesheet" href="css/swiper.min.css">
+  	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        .rmpl{
+                padding: 11px 15px 14px;
+                border-bottom: 1px solid #eaeaea;
+                background-color: #fbfbfb;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;    
+             }
+        .pinglun{   
+                 background:#fff;   
+                 }
 
-		}
-		body{
-			background: url("img/bg.jpg");
-			background-size: cover;
-		}
-		#imgs li{
-			float: left;
-			margin-right: 2px;
-			margin-bottom: 2px;
-		}
-		#imgs li img{
-			float: left;
-		}
-		#imgs li:nth-child(4n){
-			margin-right: 0;
-		}
-		#img-large{
-			display: none;
-			width: 100%;
-			height: 100%;
-			position: absolute;
-		}
-		#box{
-			display: block;
-			width: 100px;
-			height: 30px;
-			position: absolute;
-			top: 90%;
-			left: 50%;
-			margin-left: -50px;
-			background: #000;
-			opacity: .8;
-			border-radius: 5px;
-			color: #fff;
-			text-align: center;
-			text-decoration: none;
-			line-height: 30px;
-		}
-	</style>
-</head>
-<body>
-	<ul id="imgs"></ul>	
-	<div id="img-large"></div>
-	<a href="love.html" id="box">看完点我呀</a>
-	<script src="zepto.min.js"></script>
-	<script src="touch.js"></script>
-	<script>
-		$(function(){
-			var $imgs = $('#imgs');
-			var num = 16;
-			var html = '';
-			var idx = 0;
-			for(var i=0; i<num;i++){//初始化小图片
-				html += '<li><img src="img/'+ (i+1)+'min' +'.jpg" alt="" class="min"></li>';
-			}
-			$imgs.append(html);
-			var iClientWidth = $(document.body).width();
-			var iX = 2;
-			$('#imgs img').css({
-				width: Math.floor((iClientWidth - 3*iX)/4),
-				height: Math.floor((iClientWidth - 3*iX)/4)
-			});
-			var $imgLarge = $('#img-large');
-			$imgs.on('tap','li',function(){
-				idx = $(this).index();
-				$imgs.hide();
-				$imgLarge.show();
-				var src = 'img/'+ (idx+1) +'.jpg';
-				changeImg('img/'+(idx + 1)+'.jpg');
-			});
-			$imgLarge.on('tap',function(){
-				$imgLarge.hide();
-				$imgs.show();
-			}).on('swipeLeft',function(){
-				idx++;
-				if(idx == num){
-					idx = 0;
-				}
-				changeImg('img/'+(idx + 1)+'.jpg');
+        .ds-meta a{color:#f00;}
+        .ds-recent-comments{ padding-left:15px;}
+        #ds-recent-comments li.ds-comment{border:none;}
+        .ys{width:90%;margin-left:5%; margin-right:5%;}
+        .ys1{width:60%; font-size:16px; line-height:30px;display:block; margin:auto;}
+    </style>
+  </head> 
+  <body class="home blog">
+    <div class="placeholder"></div>		
+    <!--头部开始-->
+    <header class="header" style="height: 52px;">
+      <div class="navbar">
+        <p class="logo" >
+          <a href="/" title="Joker" alt="昊东博客">Joker个人博客_李昊东博客</a></p>
+        <ul class="nav">
+       
+         
+           <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">首页</a></li>
+           
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="">关于我</a></li>
+            </li>  
+            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">成长</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="">学习</a>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/php/">JavaScript</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/html/">html</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/css/">css</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/ajax/">ajax</a></li>
+                   <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a title="Dreamweaver" href="/xx/Dreamweaver/">php</a></li>
+                    
+                </ul>
+              </li>      
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">娱乐</a></li>                
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">生活</a> </li>               
+        </ul>
+        <div class="menu pull-right">
+          <form name="formsearch" action="/plus/search.php" method="get">
+            <input class="search-input" name="q" type="text" id="search-keyword" value=""  placeholder=" 输入你要找的内容"  />
+            <button type="submit" class="searchbtn search-submit" name="search" title="搜一下">    
+            <i class="fa"></i>
+            </button>
+          </form>   
+        </div>
+      </div>
+    </header>
+    <!--头部结束-->
+    <section class="container">
+      <div class="banner banner-navbar">
+  			<div class="swiper-container">
+  				<div class="swiper-wrapper">                                      
+  					<div class="swiper-slide"><img src="picture/banner_1.jpg" alt="昊东博客"></div>
+            <div class="swiper-slide"><img src="picture/banner_2.jpg" alt="昊东博客"></div>
+  					<div class="swiper-slide"><img src="picture/banner_3.jpg" alt="昊东博客"></div>
+  				</div>
+  				<div class="swiper-pagination"></div>
+  				<div class="swiper-button-next"></div>
+  				<div class="swiper-button-prev"></div>
+  			</div>
+      </div>
+      <div class="content-wrap">
+        <div class="content">
+            <div class="sticky">
+                <h2 class="title">特别推荐</h2>
+                <ul>       
+    			         <li class="item"><a href="article1.html" target="_blank">
+                      <img src="picture/20160728.jpg" alt="昊东博客" />
+                      <h3>JS复习(一)</h3>
+                      <p class="muted">(一)JS数据类型：
+1.基本数据类型(原始数据类型)：string number(NaN NaN和自己比时都不相等,一般做减乘除运算得的非数字 输出NaN) ...</p></a>
+                    </li>
+                    <li class="item"><a href="article2.html" target="_blank">
+                      <img src="picture/20160718.png" alt="昊东博客" />
+                      <h3>复习面试题(一)</h3>
+                      <p class="muted">在函数内部局部变量到处有定义(局部变量要提前声明) 所以第一个应该是undefined...</p></a>
+                    </li>
+                    <li class="item"><a href="#" target="_blank">
+                      <img src="picture/20160708.jpg" alt="昊东博客" />
+                      <h3>321</h3>
+                      <p class="muted">5456465456</p></a>
+                    </li>
+                    <li class="item"><a href="#" target="_blank">
+                      <img src="picture/20160708.jpg" alt="昊东博客" />
+                      <h3>321</h3>
+                      <p class="muted">5456465456</p></a>
+                    </li>
+                </ul>
+            </div>
+            <h2 class="title">最新发布</h2>
+  		      <article class="excerpt">
+                <div class="focus">
+                  <a href="article1.html" class="thumbnail" target="_blank">
+                  <img src="picture/20160728.jpg" alt="昊东博客" title="昊东博客"/></a>
+                </div>
+                <header>
+                  <h2>
+                    <a href="article1.html"  target="_blank">JS复习(一)</a></h2>
+                </header>
+                <p class="note">(一)JS数据类型：
+1.基本数据类型(原始数据类型)：string number(NaN NaN和自己比时都不相等,一般做减乘除运算得的非数字 输出NaN) ...</p>
+                <p>
+                  <span class="muted">
+                    <i class="icon-user icon12"></i> 李昊东 </span>
+                  <span class="muted">
+                    <i class="ico icon-time icon12"></i> 2016-11-26</span>
+                  <!-- <span class="muted">
+                    <i class="ico icon-eye-open icon12"></i>  [field:click/]次浏览</span> -->
+                </p>
+            </article>
+            <article class="excerpt">
+                <div class="focus">
+                  <a href="article2.html" class="thumbnail" target="_blank">
+                  <img src="picture/20160718.png" alt="昊东博客" title="昊东博客"/></a>
+                </div>
+                <header>
+                  <h2>
+                    <a href=""  target="_blank">复习笔试面试题(一)</a></h2>
+                </header>
+                <p class="note">找的一些前端复习题希望对大家有所帮助</p>
+                <p>
+                  <span class="muted">
+                    <i class="icon-user icon12"></i> 李昊东 </span>
+                  <span class="muted">
+                    <i class="ico icon-time icon12"></i>2017-01-10</span>
+                  <!-- <span class="muted">
+                    <i class="ico icon-eye-open icon12"></i>  [field:click/]次浏览</span> -->
+                </p>
+            </article>
+            <article class="excerpt">
+                <div class="focus">
+                  <a href="" class="thumbnail" target="_blank">
+                  <img src="picture/20160718.png" alt="昊东博客" title="昊东博客"/></a>
+                </div>
+                <header>
+                  <h2>
+                    <a href="" title="阿斯顿撒旦" target="_blank">HTML</a></h2>
+                </header>
+                <p class="note">d阿斯顿撒旦阿斯顿撒旦阿斯顿撒旦阿斯顿撒旦阿斯顿撒旦阿斯顿撒旦阿斯顿撒旦阿斯顿撒旦阿斯顿撒旦阿斯顿撒旦v阿斯顿撒旦</p>
+                <p>
+                  <span class="muted">
+                    <i class="icon-user icon12"></i> 李昊东 </span>
+                  <span class="muted">
+                    <i class="ico icon-time icon12"></i> 01-24</span>
+                  <!-- <span class="muted">
+                    <i class="ico icon-eye-open icon12"></i>  [field:click/]次浏览</span> -->
+                </p>
+            </article>
+        </div>
+      </div>
+      <aside class="sidebar">
+          <div class="widget">
+  		      <h3 class="widget_tit">热门标签</h3>
+            <div class="tag_list">
+                <ul>
+        	          <li><a href="" target="_blank">ajax</a></li>
+                    <li><a href="" target="_blank">html</a></li>
+                    <li><a href="" target="_blank">js</a></li>
+                    <li><a href="" target="_blank">css</a></li>
+                    <li><a href="" target="_blank">搞笑</a></li>
+                    <li><a href="" target="_blank">娱乐</a></li>
+                    <li><a href="" target="_blank">PHP(CI)</a></li>
+                    <li><a href="" target="_blank">李昊东</a></li>
+                    <li><a href="" target="_blank">博客</a></li>
+  			        </ul>
+            </div>
+          </div>	  
+          <div class="widget d_postlist">
+            <h3 class="widget_tit">推荐文章</h3>
+            <ul>
+  		          <li>
+                    <a href="article1.html" target="_blank">
+                      <span class="thumbnail">
+                        <img src="picture/20160728.jpg" alt="昊东博客" title="昊东博客"/>
+                      </span>
+                      <span class="text">JS复习(一)</span>
+                      <span class="muted">2016-11-26</span>
+                      <!-- <span class="muted">
+                        <span class="ds-thread-count" data-replace="1">[field:click/]次阅读</span>
+                      </span> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                      <span class="thumbnail">
+                        <img src="picture/20160718.png" alt="昊东博客" title="昊东博客"/>
+                      </span>
+                      <span class="text">复习面试题(一)</span>
+                      <span class="muted">2017-01-10</span>
+                      <!-- <span class="muted">
+                        <span class="ds-thread-count" data-replace="1">[field:click/]次阅读</span>
+                      </span> -->
+                    </a>
+                </li>         
+            </ul>
+          </div>
+          
+  		    <div class="widget d_textbanner" style=" margin-top:10px; box-shadow: 0 1px 3px rgba(0, 0, 0, .1);">
+              <a class="style03" target="_blank" style="padding-bottom:0;">
+  			       <strong>统计</strong>
+  			     </a>
+  			     <p class="ys">
+                <span class="ys1" id="showDays"></span>
+  			     </p>	
+  		    </div>				
+      </aside>
+    </section>
+    <div class="IndexLinkListWrap">
+      <div class="moketitle" style="font-size: 15px;">友情链接</div>
+      <ul class="friendlyLink">	
+          <a href="http://www.zhouqiuju.com/" target="_blank">
+            周秋菊个人博客
+          </a>&nbsp;
+          <a href="http://www.wangmingjie.net" target="_blank">web前端技术分享</a>&nbsp; 
+          <a href="http://www.hezhizheng.com/" target="_blank">何智政个人博客</a>&nbsp;
+          <a href="http://www.xiaoshuangyu.com" target="_blank">小双鱼博客</a>&nbsp;
+          <a href="http://www.qiaoboke.com" target="_blank">陈巧丽个人博客</a>&nbsp;
+          <a href="http://www.caojiefeng.com" target="_blank">曹杰峰的博客</a>&nbsp;
+          <a href="http://www.chenmin.biz/" target="_blank">陈敏个人网站</a>&nbsp;
+          <a href="http://w03210.gotoip2.com/" target="_blank">詹加兵个人博客</a>&nbsp;
+          <a href="http://www.zcmol.cn" target="_blank">早茶月光</a>&nbsp;
+          <a href="http://www.liangzl.com" target="_blank">梁中霖个人博客</a>&nbsp;
+          <a href="http://www.zhangxinxu.com/" target="_blank">张鑫旭个人博客</a>&nbsp;
+          <a href="http://www.cnblogs.com/TomXu/" target="_blank">汤姆大叔个人博客</a>&nbsp;
+          <a href="http://www.yangqq.com/" target="_blank">杨青个人博客</a>
+      </ul>
+    </div>
+    <!-- footer开始 -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div style="padding:0 20px;overflow:hidden;">
+          <div class="copyright pull-left">
+            <a>Copyright © 2016, lihaodong All Rights Reserved. </a>| <a href="http://www.miitbeian.gov.cn/"  target="_blank"  rel="nofollow">苏ICP备16050559号</a> <a target="_blank" href="">网站地图</a></div>
+           <div class="trackcode pull-right"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260588650'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260588650%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div>
+        </div>
 
-			}).on('swipeRight',function(){
-				idx--;
-				if(idx == -1){
-					idx = num - 1;
-				}
-				changeImg('img/'+(idx + 1)+'.jpg');
-			});
-			function changeImg(src){
-				$imgLarge.css({
-					background: 'url('+ src +') no-repeat center',
-					backgroundSize : 'contain'
-				});
-			}
-		});
-	</script>
-</body>
-</html>
+        </div>
+      </div>
+    </footer>
+<script src="js/jquery.js"></script>
+<!-- <script src="js/base.loading.js"></script>   -->
+<script src="js/swiper.min.js"></script> <!-- 轮播 -->
+<script src="js/html5.js"></script><!-- ie9 -->
+<script>window._deel = {
+  maillist: '',
+  maillistCode: '',
+  commenton: 0,
+  roll: [0, 0]
+  }</script>
+  <script>
+    var birthDay = new Date("09/17/2016");  // 这里填写网站第一次运行日期
+    var now = new Date();
+    var duration = now.getTime() - birthDay.getTime(); 
+    var total= Math.floor(duration / (1000 * 60 * 60 * 24));
+    total = "<strong style='color:red;'>" + total + "</strong >";
+    document.getElementById("showDays").innerHTML = "本站运行："+total+"天"; //这里就是总运行天数
+    var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      paginationClickable: true,
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: 8000,
+      autoplayDisableOnInteraction: false,
+      loop: true
+    });
+    var duoshuoQuery = {short_name:"zbblogs"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+       || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();//主页动态加载轮播图下面的点 轮播效果
+    var scrollDiv = document.createElement('div');
+          $(scrollDiv).attr('id','toTop').html('<ul><li class="backBtn" title="返回顶部"><a href="javascript:;" class="icon_backTo"></a></li></ul>').appendTo('body');
+          $(window).scroll(function(){
+              if($(this).scrollTop() > 300){
+                  $('.backBtn').fadeIn();
+              }else{
+                  $('.backBtn').fadeOut();
+              }
+          });
+          $('.backBtn').click(function(){
+              $('body,html').animate({scrollTop:0},300);
+          });
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();//网站推送
+</script>
+  </body>
+</html> 

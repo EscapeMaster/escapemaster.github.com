@@ -1,0 +1,132 @@
+﻿<!DOCTYPE HTML>
+<html> 
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,ie=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>想翻身的咸鱼</title>
+<meta name="keywords" content="昊东博客" />
+<meta name="description" content="昊东博客" />
+    <link rel='stylesheet' id='open_social_css-css' href='css/os.css' type='text/css' media='all' />
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+	<!--[if lt IE 9]>
+  <script src="{dede:global.cfg_templets_skin/}/js/html5.js"></script>
+<![endif]-->
+<script src="js/jquery.js"></script>
+<script>window._deel = {
+	maillist: '',
+	maillistCode: '',
+	commenton: 0,
+	roll: [0, 0]
+  }
+$(function() {
+	$(window).scroll(function() {
+	  $offset = $('.placeholder').offset(); //不能用自身的div，不然滚动起来会很卡
+	  if ($(window).scrollTop() > $offset.top) {
+		$('.header').css({
+		  'position': 'fixed',
+		  'top': '0px',
+		  'left': $offset.left + 'px',
+		  'z-index': '999'
+		});
+		$(".container").css({
+		  "margin-top": "93px"
+		});
+	  } else {
+		$('.header').removeAttr('style');
+		$('.container').removeAttr('style');
+	  }
+	});
+  })
+</script>
+
+
+<header class="header" style="height: 52px;">
+      <div class="navbar">
+        <p class="logo" >
+          <a href="/" title="Joker" alt="昊东博客">Joker个人博客_李昊东博客</a></p>
+        <ul class="nav">
+       
+         
+           <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">首页</a></li>
+           
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+            <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="">关于我</a></li>
+            </li>  
+            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">成长</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="">学习</a>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/php/">JavaScript</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/html/">html</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/css/">css</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/ajax/">ajax</a></li>
+                   <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a title="Dreamweaver" href="/xx/Dreamweaver/">php</a></li>
+                    
+                </ul>
+              </li>      
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">娱乐</a></li>                
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">生活</a> </li>               
+        </ul>
+        <div class="menu pull-right">
+          <form name="formsearch" action="/plus/search.php" method="get">
+            <input class="search-input" name="q" type="text" id="search-keyword" value=""  placeholder=" 输入你要找的内容"  />
+            <button type="submit" class="searchbtn search-submit" name="search" title="搜一下">    
+            <i class="fa"></i>
+            </button>
+          </form>   
+        </div>
+      </div>
+    </header>
+
+	
+ 	 <section class="container">
+		<div class="page_left">
+		<ul>
+		<li><a href="">关于我</a></li>		
+       </ul>
+		</div>
+		<div class="page_right">
+		   <h1 class="page_title">就是我</h1>   
+		   <div class="page_content">
+			   <p><img style="float:left; margin-right:20px; width:190px; height:280px;" src="{dede:global.cfg_templets_skin/}/picture/1.jpg"></p>
+               
+               <p><strong>姓    名:</strong> 李昊东(Joker) </p> 
+               <p><strong>地    区:</strong> 黑龙江  </p>
+               <p><strong>职    业:</strong> Web开发工程师  </p>
+               <p><strong>个人说明:</strong> 我是一个前端工程师 </p>
+                 
+               <p>人生就是得与失的过程，而我，却在短短的一年内明白了太多，友情、知识，就是TM没得到爱情(吐槽一下程序员真的难找女朋友)，最重要的是懂得了如何做人，如何去面对社会。</p>
+               <p>没有钱、没有经验、没有阅历、没有社会关系，这些都不可怕。没有钱，可以通过辛勤劳动去赚；没有经验，可以通过实践操作去总结；没有阅历，可以一步一步去积累；没有社会关系，可以一点一点去编织。但是，没有梦想、没有思路才是最可怕的，才让人感到恐惧，很想逃避！周而复始，恶性循环！</p>
+<p>什么是梦想？每天都冒出很多念头，那些不死的才叫做梦想。让我想起林俊杰的一首歌--有梦不难</p>
+<p>平凡的我有着不平凡的目标，就是是咸鱼我也想做一条翻过身的咸鱼，起码知道肚皮向上是什么感觉~</p>
+               <p>我的QQ：553232807</p>
+               <p>我的微信：moon_lhd</p>
+               </div>
+		</div>
+	</section>
+<div style="width:100%;" class="ds-thread" data-thread-key="" data-title="关于我栏目" data-url=""></div>
+<style>
+.page_content p{ font-size:16px;}
+.page_content span{ font-size:15px; font-weight:600; text-indent:30px;}
+</style>
+
+<!-- 多说评论框 end -->
+
+<footer class="footer">
+      <div class="footer-inner">
+        <div style="padding:0 20px;overflow:hidden;">
+          <div class="copyright pull-left">
+            <a>Copyright © 2016, lihaodong All Rights Reserved. </a>| <a href="http://www.miitbeian.gov.cn/"  target="_blank"  rel="nofollow">苏ICP备16050559号</a> <a target="_blank" href="">网站地图</a></div>
+           <div class="trackcode pull-right"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260588650'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260588650%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div>
+        </div>
+
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+﻿<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,ie=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+   <title>想翻身的咸鱼</title>
+<meta name="keywords" content="昊东博客" />
+<meta name="description" content="昊东博客" />
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel='stylesheet' id='open_social_css-css' href='css/os.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+  </head>
+  
+  <body class="home blog">
+    <div class="placeholder"></div>	
+<!--[if lt IE 9]>
+  <script src="{dede:global.cfg_templets_skin/}/js/html5.js"></script>
+<![endif]-->
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.js"></script>
+<script>window._deel = {
+	maillist: '',
+	maillistCode: '',
+	commenton: 0,
+	roll: [0, 0]
+  }</script>
+<script type="text/javascript">$(function() {
+	$(window).scroll(function() {
+	  $offset = $('.placeholder').offset(); //不能用自身的div，不然滚动起来会很卡
+	  if ($(window).scrollTop() > $offset.top) {
+		$('.header').css({
+		  'position': 'fixed',
+		  'top': '0px',
+		  'left': $offset.left + 'px',
+		  'z-index': '999'
+		});
+		$(".container").css({
+		  "margin-top": "93px"
+		});
+	  } else {
+		$('.header').removeAttr('style');
+		$('.container').removeAttr('style');
+	  }
+	});
+  })
+</script>	
+
+
+
+<header class="header" style="height: 52px;">
+      <div class="navbar">
+        <p class="logo" >
+          <a href="/" title="Joker" alt="昊东博客">Joker个人博客_李昊东博客</a></p>
+        <ul class="nav">
+       
+         
+           <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">首页</a></li>
+           
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+            <a href="">关于</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="">关于我</a></li>
+              </ul>
+            </li>  
+            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">成长</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="">学习</a>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/php/">JavaScript</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/html/">html</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/css/">css</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/ajax/">ajax</a></li>
+                   <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a title="Dreamweaver" href="/xx/Dreamweaver/">php</a></li>
+                    
+                </ul>
+              </li>      
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">娱乐</a></li>                
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">生活</a> </li>               
+        </ul>
+        <div class="menu pull-right">
+          <form name="formsearch" action="/plus/search.php" method="get">
+            <input class="search-input" name="q" type="text" id="search-keyword" value=""  placeholder=" 输入你要找的内容"  />
+            <button type="submit" class="searchbtn search-submit" name="search" title="搜一下">    
+            <i class="fa"></i>
+            </button>
+          </form>   
+        </div>
+      </div>
+    </header>
+ <section class="container">
+      <div class="content-wrap">
+        <div class="content">
+        
+        
+          <header class="archive-header">
+          
+            <h1 style="width:600px; display:inline-block;">学习</h1>
+            <p style="float:right; margin:0px; line-height:40px;">主页 > 学习 ></p>
+          </header>
+			<article class="excerpt">
+            <div class="focus">
+              <a href="article1.html" class="thumbnail" target="_blank">
+                <img src="picture/20160728.jpg" alt="JS复习" title="JS复习" /></a>
+            </div>
+            <header>
+              <h2>
+                <a href="article1.html" target="_blank">JS复习(一)</a></h2>
+            </header>
+            <p class="note">(一)JS数据类型：
+1.基本数据类型(原始数据类型)：string number(NaN NaN和自己比时都不相等,一般做减乘除运算得的非数字 输出NaN) ...</p>
+            <p>
+              <span class="muted">
+                <i class="icon-user icon12"></i>李昊东</span>
+              <span class="muted">
+                <i class="ico icon-time icon12"></i>2016-11-26</span>
+            </p>
+          </article>		 
+              
+          
+          
+           
+          <!-- <div class="pagenavi clearfix">
+            <div class="pages">
+             {dede:pagelist listsize='3' listitem='info,index,end,pre,next,pageno'/} 
+            </div>
+          </div> -->
+          
+          
+          
+        </div>
+      </div>
+      </div>
+      
+      
+      <aside class="sidebar">
+        <div class="widget d_postlist">
+          <h3 class="widget_tit">频道点击排行</h3>
+          <ul>
+			<li><a href="article1.html">
+                <span class="thumbnail">
+                  <img src="picture/20160728.jpg" alt="JS复习" title="JS复习"/></span>
+                <span class="text">JS复习(一)</span>
+                <span class="muted">2016-11-26</span>
+                <!-- <span class="muted">
+                  <span class="ds-thread-count" data-replace="1">[field:click/]次阅读</span>
+                </span> -->
+              </a></li>    
+              
+              
+                  </ul>
+        </div>
+
+		<div class="widget d_textbanner" style=" margin-top:10px;    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);">
+	<a class="style03" target="_blank" href="/">		
+        <strong>分享</strong>
+			
+
+</a>
+
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+        
+<style>
+.bdshare-button-style0-32 a{    padding: 0 3px 3px; min-height:32px;}
+.bdsharebuttonbox{margin-left:10px;}
+
+</style>
+      </aside>﻿
+      
+      
+	  </section>
+    
+		<footer class="footer">
+      <div class="footer-inner">
+        <div style="padding:0 20px;overflow:hidden;">
+          <div class="copyright pull-left">
+            <a>Copyright © 2016, lihaodong All Rights Reserved. </a>| <a href="http://www.miitbeian.gov.cn/"  target="_blank"  rel="nofollow">苏ICP备16050559号</a> <a target="_blank" href="">网站地图</a></div>
+           <div class="trackcode pull-right"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260588650'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260588650%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div>
+        </div>
+
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

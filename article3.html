@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,ie=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>文章详情</title>
+	<meta name="keywords"  content="李昊东博客"/>
+	<meta name="description"  content="李昊东博客"/>
+    <link rel="icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel='stylesheet' id='open_social_css-css' href='css/os.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <style>
+		.article-content a:hover{color:#D6D5D5;}
+		.article-content a{color:#fff;}
+		.hide_box{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+			.shang_box{width:90%;max-width:860px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;top:60%;margin-top:-280px;border:1px dotted #dedede;display:none;}
+			.shang_box img{border:none;border-width:0;}
+			.dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+			.dashang:hover{opacity:0.8;}
+			.shang_close{float:right;display:inline-block;}
+			.shang_logo{display:block;text-align:center;margin:20px auto;}
+			.shang_tit{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('/templets/boke/img/cy-reward-title-bg.jpg') no-repeat center;font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+			.shang_tit p{color:#a3a3a3;text-align:center;font-size:16px;}
+			.shang_payimg{width:140px;padding:10px;border:6px solid #EA5F00;margin:0 auto;border-radius:3px;height:140px;}
+			.shang_payimg img{display:block;text-align:center;width:140px;height:140px;margin-left: -4px; margin-top: -5px;}
+			.pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+			.radiobox{width: 16px;height: 16px;background: url('/templets/boke/img/radio2.jpg');display: block;float: left;margin-top: 5px;margin-right: 14px;}
+			.checked .radiobox{background:url('/templets/boke/img/radio1.jpg');}
+			.shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:280px;}
+			.shang_payselect .pay_item{display:inline-block;float:left;}
+			.shang_info{clear:both;}
+			.shang_info p,.shang_info a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+			.bdshare-button-style0-32 a{    padding: 0 3px 3px; min-height:32px;}
+			.bdsharebuttonbox{margin-left:10px;}
+	</style> 	
+  </head>
+  
+  <body class="single single-post single-format-standard">
+    <div class="placeholder"></div>
+   <!--[if lt IE 9]>
+  <script src="{dede:global.cfg_templets_skin/}/js/html5.js"></script>
+<![endif]-->
+
+	
+
+<!--头部开始-->
+    <header class="header" style="height: 52px;">
+      <div class="navbar">
+        <p class="logo" >
+          <a href="/" title="Joker" alt="昊东博客">Joker个人博客_李昊东博客</a></p>
+        <ul class="nav">
+       
+         
+           <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">首页</a></li>
+           
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+            <a href="">关于</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="">关于我</a></li>
+              </ul>
+            </li>  
+            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">成长</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="">学习</a>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/php/">JavaScript</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/html/">html</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/css/">css</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/ajax/">ajax</a></li>
+                   <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a title="Dreamweaver" href="/xx/Dreamweaver/">php</a></li>
+                    
+                </ul>
+              </li>      
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">娱乐</a></li>                
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">生活</a> </li>               
+        </ul>
+        <div class="menu pull-right">
+          <form name="formsearch" action="/plus/search.php" method="get">
+            <input class="search-input" name="q" type="text" id="search-keyword" value=""  placeholder=" 输入你要找的内容"  />
+            <button type="submit" class="searchbtn search-submit" name="search" title="搜一下">    
+            <i class="fa"></i>
+            </button>
+          </form>   
+        </div>
+      </div>
+    </header>
+    <!--头部结束-->
+
+
+
+
+ <section class="container">
+      <div class="content-wrap">
+        <div class="content">
+          <header class="article-header">
+            <h1 class="article-title"><h1>复习笔试面试</h1></h1>  
+            <div class="meta">
+              <span class="muted">
+                <i class="icon-user icon12"></i>
+                李昊东 </span>
+              <time class="muted">
+                <i class="ico icon-time icon12"></i>2016-11-26</time>
+              <span class="muted">
+            </div>
+          </header>
+          <article class="article-content">
+            <blockquote>
+              <p> <strong>摘要：</strong>复习JS基础语法</p>
+			</blockquote>
+            <p><h2>Js笔试面试题</h2>
+            <img src="picture/art3/jietu3.2.jpg" alt=""><br>
+            <img src="picture/art3/jietu3.1.jpg" alt=""><br>
+               先用对象形式对应起来(键值对的形式)，然后把键名都取出来拼成正则表达式的形式用正则进行匹配最后把函数放在replace函数里return 出来；最后一句话很精髓省略了判断。<br>然后就是CN Dota Best Dota Dota是我的青春
+            </p>
+            <p>
+              <img src="picture/art3/jietu3.3.jpg" alt="">
+              同理
+            </p>
+            <p>
+              <img src="picture/art3/jietu3.4.jpg" alt=""><br>
+              方法一: <br>
+              <img src="picture/art3/jietu3.5.jpg" alt="">
+              方法二：<br>
+              <img src="picture/art3/jietu3.6.jpg" alt="">
+            </p>
+            
+            <!--related:end-->
+			</article>
+          <nav class="article-nav">
+            <span class="article-nav-prev">上一篇：</span>
+            <span class="article-nav-next">下一篇：</span>
+		      </nav>
+          <!--pinglun -->     
+		  	      <!-- 多说评论框 start -->
+
+		  <!--comment:end-->
+      </div>
+      </div>
+      <aside class="sidebar">
+        <div class="widget d_postlist">
+          <h3 class="widget_tit">推荐文章</h3>
+          <ul>
+              <li>
+                    <a href="article1.html" target="_blank">
+                      <span class="thumbnail">
+                        <img src="picture/20160728.jpg" alt="昊东博客" title="昊东博客"/>
+                      </span>
+                      <span class="text">JS复习(一)</span>
+                      <span class="muted">2016-11-26</span>
+                      <!-- <span class="muted">
+                        <span class="ds-thread-count" data-replace="1">[field:click/]次阅读</span>
+                      </span> -->
+                    </a>
+                </li>
+          </ul>
+        </div>		
+      </aside>
+    </section>
+	
+
+	<footer class="footer">
+      <div class="footer-inner">
+        <div style="padding:0 20px;overflow:hidden;">
+          <div class="copyright pull-left">
+            <a>Copyright © 2016, lihaodong All Rights Reserved. </a>| <a href="http://www.miitbeian.gov.cn/"  target="_blank"  rel="nofollow">苏ICP备16050559号</a> <a target="_blank" href="">网站地图</a></div>
+           <div class="trackcode pull-right"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260588650'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260588650%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div>
+        </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">$(function() {
+	// $(window).scroll(function() {
+	//   $offset = $('.placeholder').offset(); //不能用自身的div，不然滚动起来会很卡
+	//   if ($(window).scrollTop() > $offset.top) {
+	// 	$('.header').css({
+	// 	  'position': 'fixed',
+	// 	  'top': '0px',
+	// 	  'left': $offset.left + 'px',
+	// 	  'z-index': '999'
+	// 	});
+	// 	$(".container").css({
+	// 	  "margin-top": "93px"
+	// 	});
+	//   } else {
+	// 	$('.header').removeAttr('style');
+	// 	$('.container').removeAttr('style');
+	//   }
+	// });
+	window._deel = {
+	maillist: '',
+	maillistCode: '',
+	commenton: 0,
+	roll: [0, 0]
+  }
+  })
+</script>
+  </body>
+</html>

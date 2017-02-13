@@ -1,0 +1,254 @@
+﻿<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8,ie=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>文章详情</title>
+	<meta name="keywords"  content="李昊东博客"/>
+	<meta name="description"  content="李昊东博客"/>
+    <link rel="icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel='stylesheet' id='open_social_css-css' href='css/os.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <style>
+		.article-content a:hover{color:#D6D5D5;}
+		.article-content a{color:#fff;}
+		.hide_box{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:99%;width:100%;position:fixed;display:none;}
+			.shang_box{width:90%;max-width:860px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;top:60%;margin-top:-280px;border:1px dotted #dedede;display:none;}
+			.shang_box img{border:none;border-width:0;}
+			.dashang{display:block;width:100px;margin:5px auto;height:25px;line-height:25px;padding:10px;background-color:#E74851;color:#fff;text-align:center;text-decoration:none;border-radius:10px;font-weight:bold;font-size:16px;transition: all 0.3s;}
+			.dashang:hover{opacity:0.8;}
+			.shang_close{float:right;display:inline-block;}
+			.shang_logo{display:block;text-align:center;margin:20px auto;}
+			.shang_tit{width: 100%;height: 75px;text-align: center;line-height: 66px;color: #a3a3a3;font-size: 16px;background: url('/templets/boke/img/cy-reward-title-bg.jpg') no-repeat center;font-family: 'Microsoft YaHei';margin-top: 7px;margin-right:2px;}
+			.shang_tit p{color:#a3a3a3;text-align:center;font-size:16px;}
+			.shang_payimg{width:140px;padding:10px;border:6px solid #EA5F00;margin:0 auto;border-radius:3px;height:140px;}
+			.shang_payimg img{display:block;text-align:center;width:140px;height:140px;margin-left: -4px; margin-top: -5px;}
+			.pay_explain{text-align:center;margin:10px auto;font-size:12px;color:#545454;}
+			.radiobox{width: 16px;height: 16px;background: url('/templets/boke/img/radio2.jpg');display: block;float: left;margin-top: 5px;margin-right: 14px;}
+			.checked .radiobox{background:url('/templets/boke/img/radio1.jpg');}
+			.shang_payselect{text-align:center;margin:0 auto;margin-top:40px;cursor:pointer;height:60px;width:280px;}
+			.shang_payselect .pay_item{display:inline-block;float:left;}
+			.shang_info{clear:both;}
+			.shang_info p,.shang_info a{color:#C3C3C3;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+			.bdshare-button-style0-32 a{    padding: 0 3px 3px; min-height:32px;}
+			.bdsharebuttonbox{margin-left:10px;}
+	</style> 	
+  </head>
+  
+  <body class="single single-post single-format-standard">
+    <div class="placeholder"></div>
+   <!--[if lt IE 9]>
+  <script src="{dede:global.cfg_templets_skin/}/js/html5.js"></script>
+<![endif]-->
+
+	
+
+<!--头部开始-->
+    <header class="header" style="height: 52px;">
+      <div class="navbar">
+        <p class="logo" >
+          <a href="/" title="Joker" alt="昊东博客">Joker个人博客_李昊东博客</a></p>
+        <ul class="nav">
+       
+         
+           <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">首页</a></li>
+           
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+            <a href="">关于</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="">关于我</a></li>
+              </ul>
+            </li>  
+            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="">成长</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="">学习</a>
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/php/">JavaScript</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/html/">html</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/css/">css</a></li>
+                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="/xx/ajax/">ajax</a></li>
+                   <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a title="Dreamweaver" href="/xx/Dreamweaver/">php</a></li>
+                    
+                </ul>
+              </li>      
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">娱乐</a></li>                
+      　　  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="">生活</a> </li>               
+        </ul>
+        <div class="menu pull-right">
+          <form name="formsearch" action="/plus/search.php" method="get">
+            <input class="search-input" name="q" type="text" id="search-keyword" value=""  placeholder=" 输入你要找的内容"  />
+            <button type="submit" class="searchbtn search-submit" name="search" title="搜一下">    
+            <i class="fa"></i>
+            </button>
+          </form>   
+        </div>
+      </div>
+    </header>
+    <!--头部结束-->
+
+
+
+
+ <section class="container">
+      <div class="content-wrap">
+        <div class="content">
+          <header class="article-header">
+            <h1 class="article-title"><h1>前端总复习(一)</h1></h1>  
+            <div class="meta">
+              <span class="muted">
+                <i class="icon-user icon12"></i>
+                李昊东 </span>
+              <time class="muted">
+                <i class="ico icon-time icon12"></i>2016-11-26</time>
+              <span class="muted">
+            </div>
+          </header>
+          <article class="article-content">
+            <blockquote>
+              <p> <strong>摘要：</strong>复习JS基础语法</p>
+			</blockquote>
+            <p><h2>(一)JS数据类型：</h2>
+            1.基本数据类型(原始数据类型)：string number(NaN NaN和自己比时都不相等,一般做减乘除运算得的非数字 输出NaN) boolean null undefined
+            什么会得到undefined？ 变量定义但没有赋值var a; alert(a);
+            一个函数的参数没有传值 
+            var obj={}; alert(obj.name); 访问一个对象中不存在的属性也是
+            var arr=[12]; alert(arr[2]); 访问一个数组中不存在的元素
+            什么时候得到null 直接赋值为null var a=null;
+            null指代对一个空对象的引用  
+            typeof null 返回object；这是JS最初设计的一个错误现在null被认为是空对象的占位符。dom查找元素过程中没找到也是null。typeof undefined 返回undefined. typeof function(){}。 返回function typeof [] 返回obj。 function Person(){} var p=new Person(); console.log(p.constructor) 结果是Person(){} 输出构造函数的名字  console.log(p instanceof Pserson) 结果是true 说的是p是Person的一个实例。Array.Array([]);es5中一个判断是否为数组的方法. typeof有问题测试数组是对象 不能测试出具体对象类型。   alert()默认调用toString()方法。
+            <img src="picture/jietu1.2.png" alt="昊东博客"><br>
+            Object默认继承的一些方法<br>
+            <img src="picture/jietu1.12.jpg" alt="昊东博客">
+            
+            <br>2.引用类型: 
+            数组和对象
+            </p> 
+            <p><h2>(二)js中的内存管理与一些常用的函数</h2>
+              <img src="picture/jietu1.1.png" alt="昊东博客"><br>
+               Js中有两块内存分别是栈(stack)和堆(heap)
+               栈放数据类型和变量 堆放对象<br>
+               一些常用的函数<br>
+               <img src="picture/jietu1.13.jpg" alt="昊东博客"><br>
+               <img src="picture/jietu1.14.jpg" alt="昊东博客"><br>
+               es5中的数组方法:forEach();eg:var arr=[1,2,3]; arr.forEach(function(v,i,a){});v是数组中的值 i是索引 a是数组本身<br>
+               map()函数 用法 arr[1,2].map(fucntion(x){return x*x});根据函数计算规则返回一个数组<br>
+               filter 返回一个函数里映射的数组 eg: arr.filter(function(x){return x%2==0})返回的是一个偶数数组<br>
+               a.every(function(x){return x<10}) 结果是true或flase; <br>
+               some是一些 有一个满足即可 every是所有<br>
+               a.reduce(function(x,y){return x+y},0)数组求和   注入或折叠 返回一个结果而不是一个数组 第二个参数是起始的数字<br>
+               a.indexOf(x) 返回数组的一个索引 判断一个数是否存在数组中用此函数判断不等于-1就可以了
+            </p> 
+            <p><h2>(三)数据类型转换</h2>
+               显示 var a="12"; Number(a); a=a*1(小技巧) <br> 
+               隐式 var a=2,b='3'; alert(a+b);
+            </p>
+            <p><h2>(四)关于原型prototype</h2>
+              <img src="picture/jietu1.3.png" alt="昊东博客">
+                var obj={}; 通过直接方式创建对象 <br>
+                Object.prototype<br>
+                var p1=new Person();通过构造函数<br>
+                Person.prorotype <br>
+                原型链的查找过程举个例子：function Person(){} 先找自身定义的方法找不到找自身的原型Person.prototype.方法,找不到找父类 父类还找不到接着往上找最后找到Object.prototype的方法<br>
+              <img src="picture/jietu1.4.png" alt="昊东博客"><br>
+                一些常见的坑：<br>
+              <img src="picture/jietu1.5.jpg" alt="昊东博客"><br>
+              <img src="picture/jietu1.6.png" alt="昊东博客"><br>
+              答案是wangwu   zhangsan p1有个自由的属性username='wangwu'p2没有只能去原型里查<br>
+              把上图中的Person.prototype.brother={username:'wangwu'};
+              则console.log(p2.brother.username)的答案是wangwu <br>
+              这句话的意思不是直接赋值而是查找。自身没有borther属性要到原型链里去查找<br>
+              <img src="picture/jietu1.7.jpg" alt="昊东博客"><br>
+              答案是undefined 实例化的对象没有prototype属性
+              
+            </p>   		
+ 			      <p><h2>(五)Js的继承机制</h2>
+              <img src="picture/jietu1.8.jpg" alt="昊东博客"><br>
+              结果是lisi
+              call()函数的作用是将call之前的函数的this改变当前的this如图
+              接下来是方法的继承 <br>
+              call()也可以换成apply() ClassA.apply(this,[name]);只是写法不一样,第二个参数可以用arguments,arguments本身就是数组 存的是传过来的实参<br> 
+              <img src="picture/jietu1.9.jpg" alt="昊东博客"><br>
+              ClassB的constructor会被ClassA的覆盖 所以要重新定义一下B的constructor<br>
+              这时console.log(ob.__proto__)的结果就不是Object了.是当前这个对象在原型链中他的上层所继承的那个类.
+            </p>
+            <p><h2>(六)Object.creat方法也可以用来创建对象</h2>
+              var obj=Object.creat({x:1,y:2});<br>
+              <img src="picture/jietu1.11.jpg" alt="昊东博客"><br>
+              结果是wangwu 感觉在原型链中把属性写在了原型里，这种创建方式会相互影响
+            </p> 
+            <!--related:end-->
+			</article>
+          <nav class="article-nav">
+            <span class="article-nav-prev">上一篇：</span>
+            <span class="article-nav-next">下一篇：</span>
+		      </nav>
+          <!--pinglun -->     
+		  	      <!-- 多说评论框 start -->
+
+		  <!--comment:end-->
+      </div>
+      </div>
+      <aside class="sidebar">
+        <div class="widget d_postlist">
+          <h3 class="widget_tit">推荐文章</h3>
+          <ul>
+              <li>
+                    <a href="article1.html" target="_blank">
+                      <span class="thumbnail">
+                        <img src="picture/20160728.jpg" alt="昊东博客" title="昊东博客"/>
+                      </span>
+                      <span class="text">JS复习(一)</span>
+                      <span class="muted">2016-11-26</span>
+                      <!-- <span class="muted">
+                        <span class="ds-thread-count" data-replace="1">[field:click/]次阅读</span>
+                      </span> -->
+                    </a>
+                </li>
+          </ul>
+        </div>		
+      </aside>
+    </section>
+	
+
+	<footer class="footer">
+      <div class="footer-inner">
+        <div style="padding:0 20px;overflow:hidden;">
+          <div class="copyright pull-left">
+            <a>Copyright © 2016, lihaodong All Rights Reserved. </a>| <a href="http://www.miitbeian.gov.cn/"  target="_blank"  rel="nofollow">苏ICP备16050559号</a> <a target="_blank" href="">网站地图</a></div>
+           <div class="trackcode pull-right"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260588650'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260588650%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script></div>
+        </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">$(function() {
+	// $(window).scroll(function() {
+	//   $offset = $('.placeholder').offset(); //不能用自身的div，不然滚动起来会很卡
+	//   if ($(window).scrollTop() > $offset.top) {
+	// 	$('.header').css({
+	// 	  'position': 'fixed',
+	// 	  'top': '0px',
+	// 	  'left': $offset.left + 'px',
+	// 	  'z-index': '999'
+	// 	});
+	// 	$(".container").css({
+	// 	  "margin-top": "93px"
+	// 	});
+	//   } else {
+	// 	$('.header').removeAttr('style');
+	// 	$('.container').removeAttr('style');
+	//   }
+	// });
+	window._deel = {
+	maillist: '',
+	maillistCode: '',
+	commenton: 0,
+	roll: [0, 0]
+  }
+  })
+</script>
+  </body>
+</html>
